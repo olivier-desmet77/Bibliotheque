@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+         <h1>Mettre à jour les auteurs</h1>
+
+ <form method="POST">
+        <label for="name">Nom: </label>
+        <input type="text" name="name" id="name" value="{{ author.name }}">
+
+        <label for="description">Description:</label>
+        <textarea name="description" id="description"> {{ author.description }} </textarea>
+
+        <label for="imageUrl">URL de l'image:</label>
+        <input type="url" name="imageUrl" id="imageUrl" value="{{ author.imageUrl }}" >
+
+
+        <button type="submit">Modifier l'auteur</button>
+    </form>
+
+{% endblock %}
